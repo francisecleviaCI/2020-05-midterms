@@ -1,20 +1,20 @@
 //#1//
 
-// const capitalizeSentences = function(str){
-//   let result = '';
-//   for (i = 0; i < str.length; i++ )
-//   const firstLetter = str[i];
-//   //statement to upperCase the two indices after the period. 
-//   if (firstLetter.indexOf('') + 2 === '.') {
-//     result = result + firstLetter.toUpperCase();
-//   } else {
-//     result = result + firstLetter.toLowerCase();
-//   }
+const capitalizeSentences = function(str){
+  let result = '';
+  for (i = 0; i < str.length; i++ )
+  const firstLetter = str[i];
+  //statement to upperCase the two indices after the period. 
+  if (firstLetter.indexOf('') -1 === '.') {
+    result = result + firstLetter.toUpperCase();
+  } else {
+    result = result + firstLetter.toLowerCase();
+  }
 
 
-// return result;
-// }
-// console.log(capitalizeSentences('Hello. binge watching'))
+return result;
+}
+console.log(capitalizeSentences('Hello. binge watching'))
 
 //#2//
 function isValidPassword(str){
@@ -52,25 +52,32 @@ console.log(countAs([40, 90, 50, 90]));
 //#5
 function deleteMiddleLetters(str) {
   let middleIndex = str.length / 2
-  return str.slice(0, middleIndex) + str.slice(middleIndex+1, middleIndex +1) + str.slice(middleIndex +1)
+  if (str.length % 2 === 0){
+    //middle two letters if even
+   console.log(str.slice(0, middleIndex-1) + str.slice(middleIndex, middleIndex) + str.slice(middleIndex + 1)) 
+  
+  } else { //just middle letter
+  console.log(str.slice(0, middleIndex) + str.slice(middleIndex+1, middleIndex +1) + str.slice(middleIndex +1))
+  }
 }
-console.log(deleteMiddleLetters('goodbye'));
+console.log(deleteMiddleLetters('oh hello there'));
 
 
 
 //#6//
 
-// const indexOf = function(str){
-  // let str = ''
-// for(let i = 0; i <str.length; i++){
-//   if (str[i] !== '' ){
+const indexOf = function(str){
+  let results = ''
+for(let i = 0; i <str.length; i++){
+  if (str[i] !== ' ' ){
 
-// }
+}
 
 
-// }
-// }
-// console.log(str.lastIndexOf('I am taking a test.'));
+}
+return results;
+}
+console.log(str.lastIndexOf('I am taking a test.'));
 
 //#7//
 
