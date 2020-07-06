@@ -70,8 +70,11 @@ const indexOf = function(str){
   let results = ''
 for(let i = 0; i <str.length; i++){
   if (str[i] !== ' ' ){
+    results = results + '-1'
+  } else {
+    results = results;
+  }
 
-}
 
 
 }
